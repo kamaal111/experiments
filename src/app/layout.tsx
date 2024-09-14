@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
+import Footer from "@/layout/footer";
+
 import type { ReactPropsWithChildren } from "@/types/react-types";
 
 import "./globals.css";
@@ -29,9 +31,7 @@ function RootLayout({ children }: Props) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <main>{children}</main>
-        <footer>
-          <p>Footer</p>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
