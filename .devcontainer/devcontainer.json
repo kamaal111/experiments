@@ -22,7 +22,8 @@
 				"eamodio.gitlens",
 				"esbenp.prettier-vscode",
 				"syler.sass-indented",
-				"github.vscode-github-actions"
+				"github.vscode-github-actions",
+				"ritwickdey.liveserver"
 			]
 		}
 	},

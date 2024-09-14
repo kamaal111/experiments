@@ -1,6 +1,10 @@
 run-dev: install-node-modules
     pnpm run dev
 
+build:
+    pnpm run build
+    touch out/.nojekyll
+
 lint:
     pnpm run lint
 

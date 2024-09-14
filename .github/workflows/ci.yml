@@ -32,3 +32,34 @@ jobs:
 
       - name: Lint
         run: just lint
+
+  deploy:
+    name: Deploy
+    timeout-minutes: 15
+    runs-on: ubuntu-22.04
+    needs: [quality]
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - uses: extractions/setup-just@v2
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Bootstrap
+        run: just bootstrap
+
+      - name: Build
+        run: just build
+        env:
+          ASSET_PREFIX: https://kamaal.io/experiments
+
+      - uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: out
