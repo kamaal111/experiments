@@ -21,7 +21,8 @@
 				"naumovs.color-highlight",
 				"eamodio.gitlens",
 				"esbenp.prettier-vscode",
-				"syler.sass-indented"
+				"syler.sass-indented",
+				"github.vscode-github-actions"
 			]
 		}
 	},

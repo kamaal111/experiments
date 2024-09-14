@@ -1,6 +1,9 @@
 run-dev: install-node-modules
     pnpm run dev
 
+lint:
+    pnpm run lint
+
 post-create-dev-container:
     just .devcontainer/post-create
     just bootstrap
