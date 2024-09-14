@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import Footer from "@/layout/footer";
+import MainContent from "@/layout/main-content";
 
 import type { ReactPropsWithChildren } from "@/types/react-types";
 
@@ -17,7 +18,7 @@ function RootLayout({ children }: Props) {
   return (
     <html lang="en">
       <body>
-        <main>{children}</main>
+        <MainContent>{children}</MainContent>
         <Footer />
       </body>
     </html>
